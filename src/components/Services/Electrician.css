@@ -1,0 +1,293 @@
+.container1 {
+  margin-top: 30px;
+  margin-left: 15rem;
+
+}
+
+
+
+.star-icon {
+  color: #14147a;
+}
+
+.Service {
+  margin: 10px 1px;
+  border: 1px solid gainsboro;
+  padding: 10px;
+  width: 360px;
+  height: 450px;
+  border-radius: 15px;
+  background-color: white;
+  position: fixed;
+}
+
+.service-list {
+  display: flex;
+}
+
+.service-list li {
+  flex: 1;
+  text-align: center;
+  font-size: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.service-list img {
+  height: 60px;
+  width: 60px;
+  object-fit:cover;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.service-list li::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #8c8585;
+  transition: width 0.3s;
+}
+
+.service-list li:hover::after {
+  width: 60%;
+  margin-left: 17px;
+  transition: width 0.3s;
+}
+
+.selected {
+  border: 2px solid grey;
+  padding: 1px;
+}
+
+#carouselExampleIndicators {
+  position: absolute;
+  top: 700px;
+  right: 40px;
+  width: 460px;
+}
+
+.name-box {
+  margin-right: 40rem;
+  height: 450vh;
+  border: 1px solid gainsboro;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.name-box h2{
+  font-size: 24px;
+}
+
+
+.Mainimg img {
+  border-radius: 20px;
+  height: 75vh;
+  width: 900px;
+  position: absolute;
+  right: 40px;
+  top: 120px;
+}
+
+.cart-box {
+  width: 100%; /* Adjust the width of cart boxes for a two-column layout */
+  margin: 0px;
+}
+.cart-box a {
+  padding: 6px;
+  color: #fff;
+  background-color: black;
+  margin-left: 30rem;
+  border-radius: 15px;
+}
+
+.card-content {
+  display: flex;
+  margin: 0px 20px;
+  width: 100%; /* Ensure card content spans the full width */
+}
+
+.card-body {
+  width: 60%;
+  text-align: left; /* Align text to the left */
+}
+
+.card-img-top {
+  height: 130px;
+  width: 130px;
+  margin-left: 20px;
+  object-fit: cover;
+}
+
+.card-body span {
+  padding: 4px;
+  color: green;
+  background-color: lightgreen;
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.card-body h5 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2.3rem;
+}
+
+.card-body ul {
+  padding: 0px; /* Remove default list padding */
+}
+
+.card-body li {
+  font-size: 1.2vw;
+  margin-left: 30px;
+  margin-bottom: 3px;
+  color: grey;
+}
+
+.card-body a {
+  line-height: 1.2rem;
+  text-decoration: none;
+  background-color: black;
+  padding: 7px;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 1px; /* Add some space between the text and the button */
+}
+
+@media (max-width: 1494px) {
+  .container1 {
+    margin: auto;
+  }
+  .container1 h1 {
+    font-size: 30px;
+  }
+
+  .Mainimg img {
+    margin-left: 4vw;
+    margin-right: auto;
+    width: 90vw;
+    height: auto;
+    position: static;
+  }
+
+  .cart-box a {
+    padding: 6px;
+    margin-left: 80vw;
+    margin-right: auto;
+    
+  }
+
+  .Service:not(.service) {
+    margin-top: 10px;
+    width: 100%; /* Adjust the width for smaller screens */
+    height: auto; /* Allow the height to adjust based on content */
+    position: static; /* Remove the fixed position on smaller screens */
+    border: none;
+    border-radius: none;
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  .Service ul {
+    padding-left: 0;
+  }
+
+  .card-body p {
+    font-size: 18px;
+  }
+
+  #carouselExampleIndicators {
+    position: static;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+  }
+  .name-box {
+    
+    height: auto;
+    justify-content:center; /* Adjust justification to space between */
+    align-items: center; /* Center items vertically */
+    margin: 0px; /* Adjust the margin for smaller screens */
+  }
+
+  .cart-box h2 {
+    margin-right: 2.3rem; /* Adjust the margin for smaller screens */
+    font-weight: 700;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin: 10px 0; /* Adjust margins as needed */
+  }
+
+  .card-body {
+    width: 100%; /* Full width for card body on smaller screens */
+  }
+
+  .card-img-top {
+    margin-top: 22px;
+    max-width: 70%; /* Full width for card images on smaller screens */
+    border-radius: 0; /* Corrected border-radius */
+  }
+
+  .Service p{
+    font-size: 18px;
+    text-align: center;
+  }
+  .name-box h2{
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 763px) {
+  .cart-box a {
+    padding: 6px;
+    margin-right: auto;
+    margin-left: 70vw;
+  }
+  .container1 h1 {
+    font-size: 26px;
+  }
+  .container1 h4{
+    font-size: 16px;
+  }
+  .Service p{
+    font-size: 14px;
+    
+    text-align: center;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+  .card-body h5{
+    font-size: 18px;
+  }
+  .name-box h2{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 506px) {
+  .cart-box a {
+    padding: 2vw;
+    margin-left: 65vw;
+    font-size: 10px;
+  }
+  .service-list img {
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  .container1 h1 {
+    font-size: 22px;
+  }
+}

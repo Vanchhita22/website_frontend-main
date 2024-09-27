@@ -1,0 +1,260 @@
+.container_WM {
+    margin-top: 30px;
+    margin-left: 12rem;
+  }
+  
+  .star-icon_WM {
+    color: #14147a;
+  }
+  
+  .Service_WM {
+    margin: 30px 1px;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 360px;
+    height: 180px;
+    border-radius: 15px;
+    background-color: white;
+    position: fixed;
+  }
+  
+  .service-list_WM {
+    display: flex;
+  }
+  
+  .service-list_WM li {
+    list-style:disc;
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .service-list_WM img {
+    height: 50px;
+    width: auto;
+    object-fit:cover;
+    border-radius: 5px;
+    margin: 20px;
+  }
+  
+  .service-list_WM li::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #8c8585;
+    transition: width 0.3s;
+  }
+  
+  .service-list_WM li:hover::after {
+    width: 60%;
+    margin-left: 17px;
+    transition: width 0.3s;
+  }
+  
+  .selected_WM {
+    border: 2px solid grey;
+    padding: 1px;
+  }
+  
+  #carouselExampleIndicators_WM {
+    position: absolute;
+    top: 700px;
+    right: 40px;
+    width: 460px;
+  }
+  
+  .name-box_WM {
+    margin-right: 40rem;
+    height: 450vh;
+    border: 1px solid gainsboro;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .Mainimg_WM img {
+    border-radius: 20px;
+    height: 75vh;
+    width: 900px;
+    position: absolute;
+    right: 40px;
+    top: 120px;
+  }
+  
+  .cart-box_WM {
+    width: 100%; /* Adjust the width of cart boxes for a two-column layout */
+    margin: 0px;
+  }
+  .cart-box_WM a {
+    padding: 6px;
+    color: #fff;
+    background-color: black;
+    margin-left: 30rem;
+    border-radius: 15px;
+  }
+  
+  .cart-box_WM h2 {
+    margin-top: 2.3rem;
+    font-weight: 700;
+  }
+  
+  .card-content_WM {
+    display: flex;
+    margin: 0px 20px;
+    width: 100%; /* Ensure card content spans the full width */
+  }
+  
+  .card-body_WM {
+    width: 60%;
+    text-align: left; /* Align text to the left */
+  }
+  
+  .card-img-top_WM {
+    height: 130px;
+    width: 130px;
+    margin-left: 20px;
+    object-fit:cover;
+  }
+  
+  .card-body_WM span {
+    padding: 4px;
+    color: green;
+    background-color: lightgreen;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .card-body_WM h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2.3rem;
+  }
+  
+  .card-body_WM ul {
+    padding: 0px; /* Remove default list padding */
+  }
+  
+  .card-body_WM li {
+    margin-left: 13px;
+    margin-bottom: 3px;
+    color: grey;
+  }
+  
+  .card-body_WM a {
+    line-height: 1.2rem;
+    text-decoration: none;
+    background-color: black;
+    padding: 7px;
+    color: #fff;
+    border-radius: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 1px; /* Add some space between the text and the button */
+  }
+  
+  @media (max-width: 1494px) {
+    .container_WM {
+      margin: auto;
+    }
+    .container_WM h1 {
+      font-size: 26px;
+    }
+  
+    .Mainimg_WM img {
+      width: 90vw;
+      height: auto;
+      margin-left: 15px;
+      margin-right: auto;
+      position: static;
+    }
+  
+    .cart-box_WM a {
+      padding: 6px;
+      margin-left: 80vw;
+      margin-right: auto;
+    }
+  
+    .Service_WM:not(.service) {
+      margin-top: 10px;
+      width: 100%; /* Adjust the width for smaller screens */
+      height: auto; /* Allow the height to adjust based on content */
+      position: static; /* Remove the fixed position on smaller screens */
+      border: none;
+      border-radius: none;
+      margin-bottom: 20px;
+      margin-left: 0px;
+    }
+    .Service_WM ul {
+      padding-left: 0;
+    }
+  
+    .service-list_WM li {
+      font-size: 13px; /* Adjust font size for smaller screens */
+    }
+  
+    #carouselExampleIndicators_WM {
+      position: static;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+      border: none;
+    }
+    .name-box_WM {
+      display: flex;
+      flex-direction: row; /* Stack items horizontally */
+      justify-content: space-between; /* Adjust justification to space between */
+      align-items: center; /* Center items vertically */
+      margin: 0px; /* Adjust the margin for smaller screens */
+    }
+  
+    .cart-box_WM h2 {
+      margin-right: 2.3rem; /* Adjust the margin for smaller screens */
+      font-weight: 700;
+    }
+  
+    .card-content_WM {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      margin: 10px 0; /* Adjust margins as needed */
+    }
+  
+    .card-body_WM {
+      width: 100%; /* Full width for card body on smaller screens */
+    }
+  
+    .card-img-top_WM {
+      margin-top: 22px;
+      max-width: 70%; /* Full width for card images on smaller screens */
+      border-radius: 0; /* Corrected border-radius */
+    }
+  }
+  
+  @media (max-width: 763px) {
+    .cart-box_WM a {
+      padding: 6px;
+      margin-right: auto;
+      margin-left: 70vw;
+    }
+    
+  }
+  
+  @media (max-width: 506px) {
+    .cart-box_WM a {
+      padding: 2vw;
+      margin-left: 50vw;
+      font-size: 10px;
+    }
+    .service-list_WM img {
+      height: 30px;
+      width: auto;
+      border-radius: 5px;
+      margin: 5px;
+    }
+  }
+  

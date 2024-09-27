@@ -1,0 +1,233 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0; /* Reset the default margin */
+  padding: 0; /* Reset the default padding */
+  font-size: 20px;
+}
+
+
+a {
+  color: rgb(204, 204, 204);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 12vh;
+  background: whitesmoke;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.nav__brand {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.nav__brand p {
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 800;
+  margin-left: 1rem;
+}
+
+.nav__brand img {
+  height: 50px;
+  width: auto;
+  border-radius: 10px;
+  margin-left: 1rem;
+  max-height: 50px; /* Ensure the logo doesn't get too large */
+}
+
+.navbar-search {
+  display: flex;
+  position: relative;
+}
+
+.navbar-search input {
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid black;
+  width: 100%;
+  font-size: 20px;
+}
+
+i.fas.fa-search {
+  position: absolute;
+  right: 10px;
+  left: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #000;
+  cursor: pointer;
+  font-size: 1.5vw;
+}
+
+.nav__location i {
+  font-size: 1.2vw;
+  padding-right: 10px;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.nav__toggler {
+  display: none;
+}
+
+.nav__toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: rgb(204, 204, 204);
+  transition: 0.3s ease-in;
+}
+
+.nav__link {
+  color: rgb(87, 86, 86);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-weight: 600;
+  transition: background-color 0.4s;
+  background-color: #ddd;
+  margin-right: 3rem;
+  border: #000 1px solid;
+  list-style: none;
+}
+
+.nav__location {
+  color: whitesmoke;
+  background-color: black;
+  padding: 5px 15px;
+  font-weight: 600;
+  transition: background-color 0.4s;
+  margin-right: 2rem;
+}
+.nav__link:hover {
+  color: white;
+  background-color: black;
+}
+
+.dropdown {
+  left: 12rem;
+  font-weight: 600;
+  padding: 0.5vw 1.5vw;
+  border-radius: 30px;
+  background-color: #ddd;
+  border: black 1px solid;
+}
+
+.dropdown span {
+  font-size: 20px;
+}
+
+.dropdown:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+.nav__item {
+  display: inline;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  right: -5px;
+  padding: 5px 5px;
+  height: 110px;
+  top: 57px;
+  border-radius: 10px;
+}
+
+.dropdown-content li {
+  color: black;
+  display: block;
+  background-color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border: black 1px solid;
+  text-align: center;
+}
+
+.dropdown-content li:hover {
+  color: whitesmoke;
+  background-color: black;
+}
+
+@media screen and (max-width: 1040px) {
+  .nav__toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 12vh;
+    right: 0;
+    height: 40%;
+    width: 100%;
+    background: whitesmoke;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+  .nav__brand p {
+    margin-left: 0.5rem;
+  }
+
+  .nav__brand img {
+    height: 30px;
+    margin-left: 0.5rem;
+  }
+
+  .navbar-search input {
+    padding: 0.7vw 2vw; 
+    font-size: 16px; 
+    margin-right: 2vw;
+  }
+
+  i.fas.fa-search {
+    right: 3vw;
+    left: auto; 
+    font-size: 1.2vw; 
+    padding-right: 0px;
+  }
+}
+
+.nav__active {
+  transform: translateX(0%);
+}
+
+/* Toggle Icon Animation */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
